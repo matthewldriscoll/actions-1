@@ -10,6 +10,10 @@ jobs:
 
         - name: Checkout Repo
           uses: actions/checkout@v4  
+
+                    
+        - name: Find the script
+          run: find . -name "ascii-script.sh"  
     
         - name: List Repo Files
           run: ls -ltra
@@ -18,7 +22,5 @@ jobs:
           run: |
             chmod +x ascii-script.sh
             ./ascii-script.sh
-            
-        - name: Find the script
-          run: find . -name "ascii-script.sh"
+
           
